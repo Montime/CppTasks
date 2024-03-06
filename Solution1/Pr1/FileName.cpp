@@ -1,22 +1,20 @@
 /*         #1
 #include <iostream>
-
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "ukr");
     int num1, num2, num3;
 
-    cout << "Введіть перше число: ";
+    cout << "Enter the first number: ";
     cin >> num1;
 
-    cout << "Введіть друге число: ";
+    cout << "Enter the second number: ";
     cin >> num2;
 
-    cout << "Введіть третє число: ";
+    cout << "Enter the third number: ";
     cin >> num3;
 
-    cout << "Числа, які належать інтервалу [1, 9]: ";
+    cout << "Numbers belonging to the interval [1, 9]: ";
     if (num1 >= 1 && num1 <= 9) {
         cout << num1 << " ";
     }
@@ -26,7 +24,7 @@ int main() {
     if (num3 >= 1 && num3 <= 9) {
         cout << num3 << " ";
     }
-      
+
     return 0;
 }
 */
@@ -56,7 +54,7 @@ int main() {
 
 
 
-/*         #3   
+/*         #3
 #include <iostream>
 using namespace std;
 
@@ -65,13 +63,13 @@ int main() {
 
     int n;
 
-    cout << "Введіть кількість елементів (n): ";
+    cout << "Enter the number of elements (n): ";
     cin >> n;
 
     double sum = 0;
     double value = 1.0;
 
-    cout << "Члени ряду та їх сума:\n";
+    cout << "Series members and their sum:\n";
 
     for (int i = 0; i < n; ++i) {
 
@@ -82,7 +80,7 @@ int main() {
         value = -value / 2.0;
     }
 
-    cout << "\nСума елементів ряду: " << sum << endl;
+    cout << "\nSum of series elements: " << sum << endl;
 
     return 0;
 }
@@ -91,42 +89,42 @@ int main() {
 
 
 /*         #4
-#include <iostream> 
+#include <iostream>
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "ukr");
     int n;
-    cout << "Введіть ціле число (не менше 2): ";
+    cout << "Enter an integer (at least 2): ";
     cin >> n;
     while (n < 2) {
-        cout << "Будь ласка, введіть число не менше 2: ";
+        cout << "Please enter a number greater than or equal to 2: ";
         cin >> n;
     }
     int i = 2;
     while (n % i != 0) {
         i++;
     }
-    cout << "Найменший натуральний дільник числа " << n << " - це " << i << endl;
+    cout << "The smallest natural divisor of the number " << n << " is " << i << endl;
     return 0;
 }
 */
 
 
 
-/*         #5  
-#include <iostream> 
+/*         #5
+#include <iostream>
 using namespace std;
 int main() {
     setlocale(LC_ALL, "ukr");
 
     int n;
-    cout << "Введіть кількість членів послідовності Фібоначчі: ";
+    cout << "Enter the number of terms in the Fibonacci sequence: ";
     cin >> n;
 
     int first = 0, second = 1;
 
-    cout <<"Послідовність Фібоначчі: ";
+    cout <<"Fibonacci sequence: ";
     cout << first << ", " << second;
 
     for (int i = 2; i < n; ++i) {
@@ -148,7 +146,7 @@ int main() {
 
 #include <iostream>
 #include <cstdlib>
-#include <ctime> 
+#include <ctime>
 using namespace std;
 
 int main() {
@@ -161,25 +159,26 @@ int main() {
     int attempts = 0;
 
     while (true) {
-        cout << "Введіть число від 0 до 20: ";
+        cout << "Enter a number from 0 to 20: ";
         cin >> guess;
 
         if (guess < 0 || guess > 20) {
-            cout << "Невірне значення!!!" << endl;
+            cout << "Invalid value!!!" << endl;
             continue;
         }
         attempts++;
 
         if (guess < secretNumber) {
-            cout << "Запропоноване число менше задуманого." << endl;
+            cout << "The guessed number is less than the proposed one." << endl;
         }
         else if (guess > secretNumber) {
-            cout << "Запропоноване число більше задуманого." << endl;
+            cout << "The guessed number is greater than the proposed one." << endl;
         }
         else {
-            cout << "Ви вгадали число з " << attempts << " разу." << endl;
+            cout << "You guessed the number in " << attempts << " attempts." << endl;
             break;
         }
     }
     return 0;
 }
+
